@@ -1,90 +1,90 @@
-# AI-Powered Collaborative Code Editor
+# 🚀 AI-Powered Collaborative Code Editor
 
-A real-time collaborative code editor with integrated AI features for code understanding and interview preparation.
+> Real-time collaborative coding with AI-powered code explanation and interview preparation.
 
-## Live Demo
-
-https://collaborative-editor-one.vercel.app
+🌐 **Live Demo:** https://collaborative-editor-one.vercel.app
 
 ---
 
-## Features
+## ✨ Features
 
-### Real-Time Collaborative Editing
+### 🤝 Real-Time Collaboration
 
-* Create or join rooms.
-* Multiple users can edit code simultaneously.
-* Changes are synchronized instantly using Socket.IO.
+* Create or join coding rooms.
+* Multiple users can edit simultaneously.
+* Instant synchronization using Socket.IO.
 
-### AI Code Explanation
+### 🧠 AI Code Explanation
 
 Select any piece of code and click **"Explain Code"**.
 
 The AI provides:
 
-* Explanation of what the code does.
-* Time Complexity.
-* Space Complexity.
-* Possible optimizations.
-* Alternative approaches when applicable.
-
-### AI Interview Mode
-
-Click **"Interview Me"** and choose a role:
-
-* TCS Prime
-* SDE
-* Frontend Developer
-* Backend Developer
-
-The AI asks **5 technical questions** related to:
-
-* DSA
-* DBMS
-* OOP
-* Web Development
-* Projects
-
-After every answer, the AI evaluates:
-
-* Technical correctness
-* Communication clarity
-* Missing concepts
-* Suggestions for improvement
+✅ Code Explanation
+✅ Time Complexity
+✅ Space Complexity
+✅ Possible Optimizations
+✅ Alternative Approaches
 
 ---
 
-## Tech Stack
+### 🎯 AI Interview Mode
+
+Choose your target role:
+
+* 💼 TCS Prime
+* 👨‍💻 SDE
+* 🎨 Frontend Developer
+* ⚙ Backend Developer
+
+The AI asks **5 technical questions** covering:
+
+* 📚 DSA
+* 🗄 DBMS
+* 🧩 OOP
+* 🌐 Web Development
+* 📁 Projects
+
+For every answer, the AI evaluates:
+
+⭐ Technical Correctness
+🗣 Communication Clarity
+📌 Missing Concepts
+📈 Improvement Suggestions
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
 
-* React
-* Tailwind CSS
-* Monaco Editor
-* Socket.IO Client
+* ⚛ React
+* 🎨 Tailwind CSS
+* 📝 Monaco Editor
+* 🔌 Socket.IO Client
 
 ### Backend
 
-* Node.js
-* Express.js
-* Socket.IO
+* 🟢 Node.js
+* 🚂 Express.js
+* 🔌 Socket.IO
 
 ### Database
 
-* PostgreSQL
+* 🐘 PostgreSQL
 
 ### AI
 
-* OpenRouter
-* Cohere North Mini Code (`cohere/north-mini-code:free`)
+* 🤖 OpenRouter
+* 🧠 Cohere North Mini Code (`cohere/north-mini-code:free`)
 
 ### Deployment
 
-* Vercel
+* ▲ Vercel
 
 ---
 
-## Architecture
+## 🏗 Architecture
 
 ```text
 User
@@ -116,32 +116,22 @@ PostgreSQL
 
 ---
 
-## Screenshots
+## 🔮 Future Improvements
 
-Add screenshots here:
-
-* Collaborative Editing
-* AI Code Explanation
-* AI Interview Mode
-
----
-
-## Future Improvements
-
-* Voice-based interview mode
-* Multi-language interview support
-* AI code generation
-* Interview history and analytics
-* More AI models via OpenRouter
+* 🎤 Voice-based Interview Mode
+* 🌍 Multi-language Interview Support
+* ✍ AI Code Generation
+* 📊 Interview Analytics
+* 🤖 Multiple AI Models
 
 ---
 
-## Motivation
+## 🎓 Motivation
 
-This project was built to combine:
+This project combines:
 
-* Real-time collaborative programming
-* AI-assisted code understanding
-* AI-powered interview preparation
+* 🤝 Real-time collaboration
+* 🧠 AI-assisted code understanding
+* 🎯 AI-powered interview preparation
 
-into a single platform that helps developers learn, collaborate, and prepare for technical interviews.
+into a single platform to help developers **learn, collaborate, and prepare for technical interviews**.
