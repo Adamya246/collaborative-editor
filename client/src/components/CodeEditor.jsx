@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 import Editor from '@monaco-editor/react';
+import EditorWithAI from './EditorWithAI/EditorWithAI';
 
 const LANGUAGES = [
   'javascript', 'typescript', 'python', 'java',
@@ -124,22 +125,30 @@ export default function CodeEditor({ roomData }) {
         </div>
       </div>
 
-      {/* ── Monaco Editor ── */}
-      <Editor
-        height="100%"
-        language={language}
-        value={code}
-        onChange={handleCodeChange}
-        theme="vs-dark"
-        options={{
-          fontSize: 14,
-          minimap: { enabled: false },
-          wordWrap: 'on',
-          automaticLayout: true,
-          scrollBeyondLastLine: false,
-          tabSize: 2,
-        }}
-      />
+      {/* ── Monaco Editor wrapped with AI features ── */}
+      <EditorWithAI roomId={roomId} language={language}>
+        {({ editorRef }) => (
+          <Editor
+            height="100%"
+            language={language}
+            value={code}
+            onChange={handleCodeChange}
+            theme="vs-dark"
+            onMount={(editor) => {
+              editorRef.current = editor;
+            }}
+            options={{
+              fontSize: 14,
+              minimap: { enabled: false },
+              wordWrap: 'on',
+              automaticLayout: true,
+              scrollBeyondLastLine: false,
+              tabSize: 2,
+            }}
+          />
+        )}
+      </EditorWithAI>
+
     </div>
   );
 }

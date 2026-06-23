@@ -1,0 +1,214 @@
+/* AIExplainPanel.css
+   Dark theme that matches Monaco editor's dark background.
+   Uses CSS custom properties so it's easy to retheme. */
+
+:root {
+  --panel-bg: #1e1e2e;
+  --panel-border: #313244;
+  --panel-header-bg: #181825;
+  --panel-text: #cdd6f4;
+  --panel-muted: #6c7086;
+  --panel-accent: #89b4fa;
+  --panel-green: #a6e3a1;
+  --panel-red: #f38ba8;
+  --panel-yellow: #f9e2af;
+  --panel-surface: #313244;
+  --panel-width: 340px;
+}
+
+.ai-panel {
+  width: var(--panel-width);
+  min-width: var(--panel-width);
+  background: var(--panel-bg);
+  border-left: 1px solid var(--panel-border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--panel-text);
+  overflow: hidden;
+}
+
+.ai-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--panel-header-bg);
+  border-bottom: 1px solid var(--panel-border);
+  flex-shrink: 0;
+}
+
+.ai-panel__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--panel-accent);
+}
+
+.ai-panel__icon {
+  font-size: 15px;
+}
+
+.ai-panel__close {
+  background: none;
+  border: none;
+  color: var(--panel-muted);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color 0.15s, background 0.15s;
+}
+
+.ai-panel__close:hover {
+  color: var(--panel-text);
+  background: var(--panel-surface);
+}
+
+.ai-panel__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--panel-surface) transparent;
+}
+
+.ai-panel__body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.ai-panel__body::-webkit-scrollbar-thumb {
+  background: var(--panel-surface);
+  border-radius: 3px;
+}
+
+/* States */
+
+.ai-panel__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 0;
+  color: var(--panel-muted);
+}
+
+.ai-panel__spinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--panel-surface);
+  border-top-color: var(--panel-accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.ai-panel__error {
+  background: rgba(243, 139, 168, 0.1);
+  border: 1px solid var(--panel-red);
+  border-radius: 6px;
+  padding: 12px;
+  color: var(--panel-red);
+  line-height: 1.5;
+}
+
+.ai-panel__empty {
+  color: var(--panel-muted);
+  line-height: 1.7;
+  padding: 24px 0;
+  text-align: center;
+}
+
+/* Sections */
+
+.ai-section {
+  margin-bottom: 20px;
+}
+
+.ai-section__title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--panel-accent);
+  margin: 0 0 8px 0;
+}
+
+.ai-section__body p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--panel-text);
+}
+
+/* Complexity badge */
+
+.ai-complexity {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ai-complexity__badge {
+  display: inline-block;
+  background: rgba(137, 180, 250, 0.12);
+  border: 1px solid rgba(137, 180, 250, 0.3);
+  color: var(--panel-accent);
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.ai-complexity__desc {
+  margin: 0;
+  color: var(--panel-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* List */
+
+.ai-panel__list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--panel-text);
+  line-height: 1.7;
+}
+
+.ai-panel__list li {
+  margin-bottom: 4px;
+}
+
+/* Alternative approaches */
+
+.ai-panel__alt {
+  background: var(--panel-surface);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+.ai-panel__alt strong {
+  display: block;
+  color: var(--panel-yellow);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.ai-panel__alt p {
+  margin: 0;
+  color: var(--panel-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}

@@ -1,0 +1,69 @@
+/* EditorWithAI.css */
+
+.editor-ai-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #1e1e2e;
+}
+
+/* Toolbar */
+.editor-ai-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #181825;
+  border-bottom: 1px solid #313244;
+  flex-shrink: 0;
+}
+
+.ai-toolbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #313244;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.ai-toolbar-btn--explain {
+  background: rgba(137, 180, 250, 0.08);
+  color: #89b4fa;
+  border-color: rgba(137, 180, 250, 0.25);
+}
+
+.ai-toolbar-btn--explain:hover {
+  background: rgba(137, 180, 250, 0.16);
+  border-color: #89b4fa;
+}
+
+.ai-toolbar-btn--interview {
+  background: rgba(166, 227, 161, 0.08);
+  color: #a6e3a1;
+  border-color: rgba(166, 227, 161, 0.25);
+}
+
+.ai-toolbar-btn--interview:hover {
+  background: rgba(166, 227, 161, 0.16);
+  border-color: #a6e3a1;
+}
+
+/* Editor + side panel */
+.editor-ai-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-ai-main {
+  flex: 1;
+  min-width: 0; /* prevents Monaco from overflowing */
+  overflow: hidden;
+}
