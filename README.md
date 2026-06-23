@@ -1,77 +1,147 @@
-# 🚀 Collaborative Code Editor
+# AI-Powered Collaborative Code Editor
 
-A real-time collaborative code editor where multiple developers can edit the same file simultaneously — changes sync across all connected clients in under 100ms.
+A real-time collaborative code editor with integrated AI features for code understanding and interview preparation.
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+## Live Demo
 
-## 🌐 Live Demo
-
-| Service | URL |
-|--------|-----|
-| Frontend | [collaborative-editor-one.vercel.app](https://collaborative-editor-one.vercel.app) |
-| Backend | [collaborative-editor-h7z1.onrender.com](https://collaborative-editor-h7z1.onrender.com) |
+https://collaborative-editor-one.vercel.app
 
 ---
 
-## ✨ Features
+## Features
 
-- **Real-time sync** — edits appear on all connected clients in under 100ms via WebSockets
-- **Room-based sessions** — create or join named rooms; session state persists across reconnects
-- **Monaco Editor** — the same engine that powers VS Code, with syntax highlighting for 10+ languages
-- **Conflict resolution** — concurrent edits from multiple users are merged gracefully without data loss
-- **Dark mode UI** — clean, responsive interface built in React
+### Real-Time Collaborative Editing
+
+* Create or join rooms.
+* Multiple users can edit code simultaneously.
+* Changes are synchronized instantly using Socket.IO.
+
+### AI Code Explanation
+
+Select any piece of code and click **"Explain Code"**.
+
+The AI provides:
+
+* Explanation of what the code does.
+* Time Complexity.
+* Space Complexity.
+* Possible optimizations.
+* Alternative approaches when applicable.
+
+### AI Interview Mode
+
+Click **"Interview Me"** and choose a role:
+
+* TCS Prime
+* SDE
+* Frontend Developer
+* Backend Developer
+
+The AI asks **5 technical questions** related to:
+
+* DSA
+* DBMS
+* OOP
+* Web Development
+* Projects
+
+After every answer, the AI evaluates:
+
+* Technical correctness
+* Communication clarity
+* Missing concepts
+* Suggestions for improvement
 
 ---
 
-## 🛠 Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React.js, Monaco Editor |
-| Backend | Node.js, Express.js |
-| Real-time | Socket.io (WebSockets) |
-| Database | PostgreSQL |
-
----
-
-## 📁 Project Structure
-
-```
-collaborative-editor/
-├── client/          # React frontend
-│   ├── public/
-│   └── src/
-└── server/          # Node.js backend
-    └── index.js
-```
-
----
-
-## 🚀 Running Locally
-
-### Prerequisites
-- Node.js v16+
-- PostgreSQL
-
-### Backend
-```bash
-cd server
-npm install
-node index.js
-```
+## Tech Stack
 
 ### Frontend
-```bash
-cd client
-npm install
-npm start
+
+* React
+* Tailwind CSS
+* Monaco Editor
+* Socket.IO Client
+
+### Backend
+
+* Node.js
+* Express.js
+* Socket.IO
+
+### Database
+
+* PostgreSQL
+
+### AI
+
+* OpenRouter
+* Cohere North Mini Code (`cohere/north-mini-code:free`)
+
+### Deployment
+
+* Vercel
+
+---
+
+## Architecture
+
+```text
+User
+
+↓
+
+React + Monaco Editor
+
+↓
+
+Socket.IO
+
+↓
+
+Node + Express
+
+↓
+
+OpenRouter API
+
+↓
+
+Cohere North Mini Code
+
+↓
+
+PostgreSQL
 ```
 
 ---
 
-## 📄 License
+## Screenshots
 
-MIT
+Add screenshots here:
+
+* Collaborative Editing
+* AI Code Explanation
+* AI Interview Mode
+
+---
+
+## Future Improvements
+
+* Voice-based interview mode
+* Multi-language interview support
+* AI code generation
+* Interview history and analytics
+* More AI models via OpenRouter
+
+---
+
+## Motivation
+
+This project was built to combine:
+
+* Real-time collaborative programming
+* AI-assisted code understanding
+* AI-powered interview preparation
+
+into a single platform that helps developers learn, collaborate, and prepare for technical interviews.
